@@ -244,7 +244,7 @@ fn link_sdl2(target_os: &str) {
         if cfg!(feature = "bundled")
             || (cfg!(feature = "use-pkgconfig") == false && cfg!(feature = "use-vcpkg") == false)
         {
-            println!("cargo:rustc-link-lib=SDL2main");
+            // println!("cargo:rustc-link-lib=SDL2main");
             if target_os == "windows-msvc" {
                 println!("cargo:rustc-link-lib=SDL2-static");
             } else {
