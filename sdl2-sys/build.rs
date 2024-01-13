@@ -213,7 +213,7 @@ fn link_sdl2(target_os: &str) {
 
     #[cfg(not(feature = "static-link"))]
     {
-        if target_os == "ios" {
+        if target_os.contains( "ios" ) {
             // iOS requires additional linking to function properly
             println!("cargo:rustc-flags=-l framework=AVFoundation");
             println!("cargo:rustc-flags=-l framework=AudioToolbox");
