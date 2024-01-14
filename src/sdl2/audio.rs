@@ -933,7 +933,7 @@ impl<CB: AudioCallback> AudioDevice<CB> {
                 iscapture_flag,
                 &desired,
                 obtained.as_mut_ptr(),
-                1,
+                0,
             );
             match device_id {
                 0 => Err(get_error()),
